@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פרויקט ה-Web שלי</title>
+  
+  <!-- טעינת ספרית Supabase ישירות מה-CDN ללא התקנות -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🚀 האפליקציה שלי</h1>
+    
+    <!-- טופס שליחת נתונים -->
+    <form id="data-form" class="card">
+      <h3>הוספת פריט חדש</h3>
+      <div class="input-group">
+        <input type="text" id="item-input" placeholder="רשום משהו..." required>
+        <button type="submit">שמור בבסיס הנתונים</button>
+      </div>
+    </form>
+
+    <!-- אזור תצוגת הנתונים מה-Database -->
+    <div class="card">
+      <h3>נתונים שנשמרו ב ענן (Supabase):</h3>
+      <ul id="items-list">
+        <li class="loading">טוען נתונים...</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- טעינת לוגיקת החיבור והאפליקציה -->
+  <script src="supabaseClient.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
