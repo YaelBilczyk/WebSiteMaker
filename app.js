@@ -9,7 +9,7 @@ const itemsList = document.getElementById('items-list');
 // 1. פונקציה לקריאת נתונים מבסיס הנתונים (Read)
 async function loadData() {
   // פנייה לטבלת 'items' ב-Supabase
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('items')
     .select('*')
     .order('created_at', { ascending: false });
@@ -44,7 +44,7 @@ dataForm.addEventListener('submit', async (e) => {
   if (!textValue) return;
 
   // שליחת הנתון ל-Supabase
-  const { error } = await supabase
+  const { error } = await supabaseClient
     .from('items')
     .insert([{ title: textValue }]);
 
