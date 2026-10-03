@@ -3,38 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>פרויקט ה-Web שלי</title>
-  
-  <!-- טעינת ספרית Supabase ישירות מה-CDN ללא התקנות -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  
+  <title>דף הבית | האפליקציה שלי</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="top-navigation" aria-label="ניווט ראשי">
+      <a href="messages.html">שליחת הודעה</a>
+      <a href="recent.html">שלוש ההודעות האחרונות</a>
+    </nav>
+  </header>
 
-  <div class="container">
-    <h1>🚀 האפליקציה שלי</h1>
-    
-    <!-- טופס שליחת נתונים -->
-    <form id="data-form" class="card">
-      <h3>הוספת פריט חדש</h3>
-      <div class="input-group">
-        <input type="text" id="item-input" placeholder="רשום משהו..." required>
-        <button type="submit">שמור בבסיס הנתונים</button>
+  <main class="container">
+    <h1>🚀 ברוכים הבאים לאפליקציה שלי</h1>
+    <section class="card home-card">
+      <h2>מה תרצו לעשות?</h2>
+      <p>אפשר לשלוח הודעה חדשה או לצפות בשלוש ההודעות האחרונות שנשלחו.</p>
+      <div class="home-links">
+        <a href="messages.html">שליחת הודעה</a>
+        <a href="recent.html">צפייה בהודעות האחרונות</a>
       </div>
-    </form>
-
-    <!-- אזור תצוגת הנתונים מה-Database -->
-    <div class="card">
-      <h3>נתונים שנשמרו ב ענן (Supabase):</h3>
-      <ul id="items-list">
-        <li class="loading">טוען נתונים...</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- טעינת לוגיקת החיבור והאפליקציה -->
-  <script src="supabaseClient.js"></script>
-  <script src="app.js"></script>
+    </section>
+  </main>
 </body>
 </html>

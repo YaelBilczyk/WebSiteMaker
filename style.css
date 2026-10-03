@@ -17,6 +17,46 @@ h1 {
   color: #1a202c;
 }
 
+.site-header {
+  margin: -20px -20px 32px;
+  padding: 14px 20px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.top-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.top-navigation a,
+.home-links a {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.top-navigation a[aria-current="page"] {
+  color: #1e3a8a;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.home-card {
+  text-align: center;
+}
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 20px;
+}
+
 .card {
   background: white;
   padding: 20px;
@@ -65,6 +105,11 @@ li {
 
 li:last-child {
   border-bottom: none;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.7;
 }
 
 .loading { color: #64748b; }

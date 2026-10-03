@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שליחת הודעה</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-navigation" aria-label="ניווט ראשי">
+      <a href="messages.html" aria-current="page">שליחת הודעה</a>
+      <a href="recent.html">שלוש ההודעות האחרונות</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>שליחת הודעה</h1>
+
+    <form id="data-form" class="card">
+      <h2>הוספת הודעה חדשה</h2>
+      <div class="input-group">
+        <input type="text" id="item-input" placeholder="רשמו הודעה..." maxlength="500" required>
+        <button type="submit">שליחה</button>
+      </div>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="supabaseClient.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
