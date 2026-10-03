@@ -1,0 +1,5 @@
+# Pedagogical AI Rules for Students
+- Always explain concepts using Client <-> Server <-> Database structure.
+- Provide small code snippets, NOT the entire project at once.
+- Write explanatory comments in Hebrew inside JavaScript and HTML files.
+- Stick to Vanilla HTML, CSS, JavaScript, and Supabase CDN.
